@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url("../fonts/OpenSans-Regular.ttf");
+    font-size: 1em;
+}
+header {
+    width: 100%;
+    height: 130px;
+    background-color: green;
+}
+
+header .container{
+    position: relative;
+}
+
+header .header-black{
+    background-color: black;
+    height: 40px;
+
+}
+
+header img{
+    position: absolute;
+    top: 10px;
+}
+
+#menu {
+    margin: 26px 0;
+}
+
+#menu li {
+    display: inline-block;
+    font-family: "OpenSans";
+}
+
+#menu li.search {
+    width: 182px;
+}
+
+#menu li.search input {
+    background-color: green;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+
+#menu li.search ::-webkit-input-placeholder {
+    color: white;
+}
+
+#menu li.search button {
+    border: none;
+    background: none;
+}
+
+#menu li.search button i {
+    font-size: 16px;
+    color: rgb(255,255,255,0.5);
+}
+
+#menu li a {
+    color: white;
+    font-size: 16px;
+    padding: 10px 25px;
+    text-decoration: none;
+}
