@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url("../fonts/OpenSans-Regular.ttf");
+    font-size: 1em;
+}
+
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url("../fonts/OpenSans-Light.ttf");
+    font-size: 1em;
+}
+
+header {
+    width: 100%;
+    height: 130px;
+    background-color: rgba(32, 138, 0, 0.7);
+    z-index: 2;
+    position: relative;
+}
+
+header .container{
+    position: relative;
+}
+
+header .header-black{
+    background-color: #000;
+    height: 40px;
+}
+
+header img{
+    position: absolute;
+    top: 10px;
+}
+
+#menu {
+    margin: 26px 0;
+}
+#menu li {
+    display: inline-block;
+    font-family: "OpenSans";
+}
+#menu li.search {
+    width: 182px;
+}
+#menu li.search input {
+    background-color: green;
+    color: #FFF;
+    height: 30px;
+    line-height: 30px;
+}
+#menu li.search ::-webkit-input-placeholder {
+    color: #FFF;
+}
+#menu li.search button {
+    border: none;
+    background: none;
+}
+#menu li.search button i {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+}
+#menu li a {
+    color: #FFF;
+    font-size: 16px;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+
+#banner {
+    background: url("../images/banner.jpg");
+    width: 100%;
+    height: 728px;
+    background-position: 0px -100px;
+    background-size: cover;
+    top: -110px;
+    position: relative;
+}
+#banner h1 {
+    color: #FFF;
+    top: 300px;
+    position: relative;
+    font-size: 92px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+    font-family: OpenSans-Lights;
+    margin-left: 50px;
+}
+#banner h1 small {
+    font-size: 32px;
+    display: block;
+    color: #FFF;
+    font-family: 'OpenSans';
+    font-weight: bold;
+}
+#news h2 {
+    color: rgba(32, 138 , 0, 0.7);
+    font-family: "OpenSans-Light";
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#news hr {
+    border: yellow solid 6px;
+    width: 1350px;
+    margin: 0 auto;
+}
+#news .thumbnails {
+    width: 100%;
+    margin-top: 20px;
+}
+#news .thumbnails h3 {
+    background-color: rgba(32, 138 , 0, 1);
+    font-size: 18px;
+    font-family: "OpenSans";
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+#news .thumbnails time {
+    color: #a7a7a7;
+    font-size: 18px;
+    font-family: "OpenSans";
+}
+#estatísticas {
+    background-color: rgba(32, 138 , 0, 0.7);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+#estatísticas {
+    color: yellow;
+    text-transform: uppercase;
+    font-family: "OpenSans-Light";
+    font-size: 38px;
+}
+#estatísticas p small {
+    color: #FFF;
+    font-size: 20px;
+    display: block;
+}
+#call-to-action {
+    text-align: center;
+    margin-top: 105px;
+}
+#call-to-action h2 {
+    color: rgba(32, 138 , 0, 0.7);
+    font-family: "OpenSans-Light";
+    font-size: 48px;
+    text-align: center;
+}
+#call-to-action hr {
+    border: yellow solid 8px;
+    width: 1180px;
+    margin: 0 auto;
+}
+#call-to-action p {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #656565;
+}
+#call-to-action .btn {
+    min-width: 164px;
+    height: 44px;
+    line-height: 34px;
+    border-radius: 0; 
+}
+#call-to-action .btn-amarelo {
+    background-color:rgba(249, 222, 20, 0.7) ;
+    border-bottom: rgba(249, 222, 20, 0.7);
+    color: #000;
+}
+#call-to-action .btn-verde {
+    background-color: rgba(32, 138 , 0, 0.7);
+    border-color: rgba(32, 138 , 0, 0.7);
+    color: #FFF;
+}
+#call-to-action .row-max-400 {
+    max-width: 400px;
+    margin: 0 auto;
+}
