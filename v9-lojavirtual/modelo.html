@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Seleção Brasileira</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/lib/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/lib/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/lib/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="assets/css/websie.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img id="Logotipo" src="assets/images/brasil-logo.png" alt="logotipo" width="150px" height="150px">
+        </div>
+
+        <div class="header-black">
+            <div class="container">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <nav id="menu" class="d-flex justify-content-end">
+                    <ul>
+                        <li><a href="index.html">Home</a></li> 
+                        <li><a href="videos.html">Vídeos</a></li> 
+                        <li><a href="#">Ingresso</a></li> 
+                        <li><a href="#">Notícias</a></li> 
+                        <li><a href="#">Calendário</a></li> 
+                        <li class="search">
+                            <div class="input-group">
+                                <input id= "input-search" type="search" class="form-control" placeholder="buscar...">
+                                <span class="input-group-btn">
+                                    <button class="" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <footer>
+        <div class="row row-cinza-claro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-red">
+                        <img class="logotipo" src="assets/images/brasil-logo.png" alt="Logotipo" width="150px" height="150px">
+                    </div>
+
+                    <div class="col-md-10 col-red">
+                        <div class="row row-cols">
+                            <div class="col-md-4 col-yellow col-popular-posts">
+                                <h4>POPULAR POSTS</h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <h5>Rumo ao hexa</h5>
+                                        <time datetime="23/09/24">23 de setembro de 2024</time>
+                                    </li>
+                                    <li>
+                                        <h5>O sonho dos brasileiros</h5>
+                                        <time datetime="23/09/2024">23 de setembro de 2024</time>
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <div class="col-md-4 col-yellow">
+                                <h4>LINKS</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="fa fa-angle-right">Ingressos</a></li>
+                                    <li><a href="#" class="fa fa-angle-right">Notícias</a></li>
+                                    <li><a href="#" class="fa fa-angle-right">Calendário</a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="col-md-4 col-yellow col get-in-touch">
+                                <h4>FIQUE POR DENTRO</h4>
+                                <address>
+                                <i class="fa-fa-map-marker">Avenida Brasil, 100 São Paulo 04555-000</i>
+                                </address>
+                                <p><a href="tel:+551155010001" class="tel">+55 (11)5501-0001</a></p>
+                                <ul class="list-unstyled list socials">
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="row row-cinza-escuro">
+                <div class="container">
+                    <p class="pull-left texto-amarelo">Copyright Website Seleção Brasileira de futebol</p>
+                    <p class="pull-right texto-verde">Criado por Marianne Menon</p>
+
+                </div>
+            </div>
+    </footer>
+
+    <script src="assets/lib/bootstrap-5.3.3-dist/js/bootstrap.min.js"> </script>
+    <script src="assets/lib/jquery-3.7.1.min.js"></script>
+    <script src="assets/lib/owl-carousel/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#input-search").on("focus", function(){
+                $("li.search").addClass("ativo");
+            }).on ("blur", function(){
+                $("li.search").removeClass("ativo");
+            })
+        });
+
+        $(".thumbnails").owlCarousel({
+                loop:true,
+                nav:true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    480: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            });
+
+    </script>
+</body>
+</html>
