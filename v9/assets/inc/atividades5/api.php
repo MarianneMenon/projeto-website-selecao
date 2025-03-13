@@ -1,10 +1,10 @@
 <?php
  
-include("configuration.php");
+include("../configuration.php");
  
 $app = new Sql();
  
-$result = $app->query("SELECT * from tb_produtos");
+$result = $app->query("SELECT id_prod, nome_prod_curto, id_cat, preco  FROM tb_produtos");
  
 if($result){
     $produtos = [];
