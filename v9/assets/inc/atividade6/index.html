@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Produtos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #984caf;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #984caf;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 2px solid #ddd; 
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .search-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .search-container input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container button {
+            padding: 8px 16px;
+            background-color: #984caf;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+        .search-container button:hover {
+            background-color: #984caf;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BUSCA DE PRODUTOS</h1>
+</header>
+
+<main>
+    <h2>Produtos</h2>
+    <div class="search-container">
+        <input type="text" placeholder="BUSCA..." />
+        <button>buscar</button>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Produto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+        </tbody>
+    </table>
+</main>
+
+<script src="../../../assets/lib/jquery/jquery-3.7.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".busca").click(function(){
+            let produto = $("#buscar-text").val();
+            $.getJSON("api-produtos.php?produtos=Camisa" + produtos, function(data){
+                $("#tbody-produtos").empty();
+                if(data.error){
+                    $("tbody-produtos").append(<tr><td>"+ ${data.error}+"</td><tr>);
+
+
+                }else{
+                    $.each(data, function(index, produto){
+                    $("#tbody-produtos").append(
+                        <tr>
+                            <td>produto.id</td>
+                            <td>produto.nome</td>
+                            <td>produto.cat</td>
+                            <td>produto.preco</td>
+                         </tr>
+                    )
+
+
+                    })
+
+                }
+
+            })
+        });
+     
+
+    });
+</script>
+</body>
+</html>
